@@ -1,11 +1,35 @@
 {
-  "name": "@x-player/vue",
+  "name": "@xui/vue",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
+  "style": "./dist/runtime/index.css",
   "type": "module",
+  "main": "./dist/unplugin.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/unplugin.d.mts",
+      "import": "./dist/unplugin.mjs",
+      "style": "./dist/runtime/index.css"
+    },
+    "./runtime/*": "./dist/runtime/*",
+    "./components/*": "./dist/runtime/components/*"
+  },
   "scripts": {
-    "dev": "pnpm --filter @playground/vue dev"
+    "dev": "pnpm --filter @playground/vue dev",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "tailwind-merge": "catalog:",
+    "tailwind-variants": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "^3.6.1",
+    "vue": "^3.5.34",
+    "vue-tsc": "^3.3.2"
   },
   "packageManager": "pnpm@11.1.3"
 }

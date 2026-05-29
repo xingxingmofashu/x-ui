@@ -1,20 +1,27 @@
 {
-  "name": "x-player",
+  "name": "xui",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "dev": "pnpm --filter @playground/vue dev",
     "lint": "oxlint",
     "format": "oxfmt --check",
     "prepare": "husky"
   },
+  "dependencies": {
+    "tailwind-merge": "^3.6.0",
+    "tailwind-variants": "^3.2.2",
+    "tailwindcss": "^4.3.0"
+  },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "husky": "^9.1.7",
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
     "oxlint-tsgolint": "^0.23.0",
-    "typescript": "~6.0.3"
+    "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@11.1.3"
 }
